@@ -1,6 +1,6 @@
 // get firebase modules via Javascript SDK
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 
@@ -31,4 +31,4 @@ export const auth = getAuth(app);
 // initialze firestore by passing in firebase `app` instance we delared
 export const db = getFirestore(app);
 
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
