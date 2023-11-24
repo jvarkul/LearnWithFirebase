@@ -1,5 +1,6 @@
 // get firebase modules via Javascript SDK
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 
@@ -12,13 +13,14 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.5.2/firebase
 
 // STEP 1: Declare Firebase Environment Variables  
 const firebaseConfig = {
-    apiKey: "YOUR-OWN-VARIABLE",
-    authDomain: "YOUR-OWN-VARIABLE",
-    projectId: "YOUR-OWN-VARIABLE",
-    storageBucket: "YOUR-OWN-VARIABLE",
-    messagingSenderId: "YOUR-OWN-VARIABLE",
-    appId: "YOUR-OWN-VARIABLE",
-};
+    apiKey: "AIzaSyDIwvWGGETJmNPcvbDPyizBkuIkNTsRil4",
+    authDomain: "learn-with-fire-9d13f.firebaseapp.com",
+    projectId: "learn-with-fire-9d13f",
+    storageBucket: "learn-with-fire-9d13f.appspot.com",
+    messagingSenderId: "587304284083",
+    appId: "1:587304284083:web:7c68861b6274f170ca25c6",
+    measurementId: "G-Z51Z1LV8D3"
+  };
 
 // initialze firebase in our project by passing in our environment variables to the `initializeApp` method
 const app = initializeApp(firebaseConfig);
@@ -28,3 +30,5 @@ export const auth = getAuth(app);
 
 // initialze firestore by passing in firebase `app` instance we delared
 export const db = getFirestore(app);
+
+const analytics = getAnalytics(app);
